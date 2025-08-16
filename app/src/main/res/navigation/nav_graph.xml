@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/section">
+
+
+    <fragment
+        android:id="@+id/item"
+        android:name="com.learning.adminmotawkel.Presentation.Item"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" />
+    <fragment
+        android:id="@+id/tradeMarks"
+        android:name="com.learning.adminmotawkel.Presentation.TradeMarks"
+        android:label="fragment_trade_marks"
+        tools:layout="@layout/fragment_trade_marks" >
+        <action
+            android:id="@+id/action_tradeMarks_to_item"
+            app:destination="@id/item" />
+    </fragment>
+    <fragment
+        android:id="@+id/section"
+        android:name="com.learning.adminmotawkel.Presentation.Section.AddSection"
+        android:label="fragment_section"
+        tools:layout="@layout/fragment_section" >
+        <action
+            android:id="@+id/action_section_to_tradeMarks"
+            app:destination="@id/tradeMarks" />
+    </fragment>
+</navigation>

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "689609042580",
+    "firebase_url": "https://elmotawkel-cb41f-default-rtdb.firebaseio.com",
+    "project_id": "elmotawkel-cb41f",
+    "storage_bucket": "elmotawkel-cb41f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689609042580:android:60d9fe2e3c052adeb4a281",
+        "android_client_info": {
+          "package_name": "com.dev.ecommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvPMfkmlauBrY6cTVulv53GYHJDvF5uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689609042580:android:8d3d1b4a585688c8b4a281",
+        "android_client_info": {
+          "package_name": "com.gomla.motwakeladmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvPMfkmlauBrY6cTVulv53GYHJDvF5uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689609042580:android:75166b84748d044eb4a281",
+        "android_client_info": {
+          "package_name": "com.learning.adminmotawkel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvPMfkmlauBrY6cTVulv53GYHJDvF5uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689609042580:android:355e91db50cd3daab4a281",
+        "android_client_info": {
+          "package_name": "com.motwakel.mm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvPMfkmlauBrY6cTVulv53GYHJDvF5uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689609042580:android:c75af69aef7358a8b4a281",
+        "android_client_info": {
+          "package_name": "com.wkalaelgomla.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvPMfkmlauBrY6cTVulv53GYHJDvF5uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
