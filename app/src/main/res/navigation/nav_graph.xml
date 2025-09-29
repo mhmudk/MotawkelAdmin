@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/section"
-        android:name="com.learning.adminmotawkel.Presentation.Section.AddSection"
+        android:name="com.learning.adminmotawkel.Presentation.Section.AddProduct"
         android:label="fragment_section"
         tools:layout="@layout/fragment_section" >
         <action

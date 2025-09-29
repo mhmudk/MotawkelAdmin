@@ -1,44 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp"
-    tools:context=".Presentation.Section.AddSection">
+    tools:context=".Presentation.Section.AddProduct">
 
-    <ImageView
-        android:id="@+id/sectionImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/yes" />
-
-    <EditText
-        android:id="@+id/sectionName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:hint="Add section name here"
-        android:layout_marginTop="12dp"
-        android:textStyle="bold" />
-<ProgressBar
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:visibility="gone"
-    android:id="@+id/progress_section"
-    />
-    <Button
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        android:id="@+id/AddSection"
-        android:layout_marginTop="15dp"
-        android:text="Add Section"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <!-- صورة -->
+        <ImageView
+            android:id="@+id/sectionImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/yes" />
 
+        <!-- اسم الكاتيجوري -->
+        <EditText
+            android:id="@+id/sectionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="اسم القسم"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18sp" />
 
+        <!-- خط فاصل -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="#E0E0E0" />
 
+        <!-- صورة تانية -->
+        <ImageView
+            android:id="@+id/secondImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
 
-</LinearLayout>
+        <!-- خط فاصل -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/black" />
+
+        <!-- صورة -->
+        <ImageView
+            android:id="@+id/thirdImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <!-- EditText -->
+        <EditText
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="لبن بخيرة "
+
+            android:textColorHint="@color/black" />
+
+        <!-- LinearLayout أفقي للأسعار -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/single_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="سعر الكيس"
+                android:inputType="number"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/all_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="سعر الكل"
+                android:inputType="number"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
+
+        <!-- CheckBoxes -->
+        <CheckBox
+            android:id="@+id/has_offer_or_not"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/best_seller"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/offer_for_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <!-- EditTexts -->
+        <EditText
+            android:id="@+id/single_price_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="اسم السعر المنفصل"
+/>
+
+        <EditText
+            android:id="@+id/all_price_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="اسم السعر كامل "
+ />
+
+        <Button
+            android:id="@+id/add_item"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

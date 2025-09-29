@@ -2,8 +2,10 @@ package com.learning.adminmotawkel.Domain.ViewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.learning.adminmotawkel.Core.Helpers.showLogs
 import com.learning.adminmotawkel.Core.UiState
 import com.learning.adminmotawkel.Domain.FirebaseOperations
+import com.learning.adminmotawkel.Domain.models.product.Product
 import com.learning.adminmotawkel.Domain.models.sections.SectionModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -18,17 +20,19 @@ class SectionVM @Inject constructor(
 ) : ViewModel() {
 
     private val _getSections = MutableStateFlow<UiState<List<SectionModel>>>(UiState.Loading)
-    val getSections: StateFlow<UiState<List<SectionModel>>> get() =_getSections
+    val getSections: StateFlow<UiState<List<SectionModel>>> get() = _getSections
 
-    private val _addSections = MutableStateFlow<UiState<SectionModel>>(UiState.Loading)
-    val addSections: StateFlow<UiState<SectionModel>> get() =_addSections
+    private val _addSections = MutableStateFlow<UiState<Boolean>>(UiState.Loading)
+    val addSections: StateFlow<UiState<Boolean>> get() = _addSections
 
-    fun addSection(section: SectionModel) {
+    fun addSection(product: Product) {
+        showLogs("addSectionVM")
+
         viewModelScope.launch(Dispatchers.IO) {
             _addSections.value = UiState.Loading
             try {
-                firebaseOperations.addSection(section)
-                _addSections.value = UiState.Success(section)
+                val result = firebaseOperations.addProduct(product)
+                _addSections.value = UiState.Success(result)
             } catch (e: Exception) {
                 _addSections.value = UiState.Error(e.message ?: "Unknown error")
             }
