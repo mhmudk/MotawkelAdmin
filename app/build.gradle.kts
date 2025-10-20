@@ -2,8 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
-    id("com.google.dagger.hilt.android") // Dagger Hilt
-    kotlin("kapt") // عشان نقدر نعمل Annotation Processing لـ Hilt
+    id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
+
+    kotlin("kapt")
+
 }
 
 android {
@@ -71,4 +74,7 @@ dependencies {
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-compiler:2.51.1")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
 }

@@ -8,12 +8,12 @@
 
     <fragment
         android:id="@+id/item"
-        android:name="com.learning.adminmotawkel.Presentation.Item"
+        android:name="com.learning.adminmotawkel.Presentation.ProductItem"
         android:label="fragment_item"
         tools:layout="@layout/fragment_item" />
     <fragment
         android:id="@+id/tradeMarks"
-        android:name="com.learning.adminmotawkel.Presentation.TradeMarks"
+        android:name="com.learning.adminmotawkel.Presentation.TradeMarks.TradeMarks"
         android:label="fragment_trade_marks"
         tools:layout="@layout/fragment_trade_marks" >
         <action
